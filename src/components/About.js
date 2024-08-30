@@ -30,17 +30,17 @@ const About = () => {
         {/* Image Section */}
         <div className="image-container">
           <img
-            src="https://via.placeholder.com/600x400"
+            src="https://inbusiness.kz/uploads/25/images/KQpAKWLI.jpg"
             alt="Research Image"
             className="animated-image"
           />
           <img
-            src="https://via.placeholder.com/600x400"
+            src="https://tengrinews.kz/userdata/images/u38/resized/33f5649430ac6bbd99037ed8fb261c39.jpg"
             alt="Team Collaboration"
             className="animated-image"
           />
           <img
-            src="https://via.placeholder.com/600x400"
+            src="https://sdu.edu.kz/wp-content/uploads/2024/07/%D0%9A%D0%BE%D0%BF%D0%B8%D1%8F-SDU-Faces-052-1024x683.jpg"
             alt="Impactful Projects"
             className="animated-image"
           />

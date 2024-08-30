@@ -21,7 +21,7 @@ h3 {
 
 /* Header */
 header {
-  background-color: #212153;
+  background-color: #006749;
   color: white;
   padding: 10px;
   position: fixed;
@@ -35,7 +35,7 @@ header {
 }
 
 header:hover {
-  background-color: #1a1a6a;
+  background-color: #006755;
 }
 
 header nav {
@@ -129,7 +129,7 @@ header nav {
     position: absolute; /* Position absolutely */
     top: 40px; /* Adjust position below the header */
     left: 0; /* Align with the left edge */
-    background-color: #212153; /* Background color for the dropdown */
+    background-color: #006749; /* Background color for the dropdown */
     z-index: 0; /* Ensure it appears above other content */
   }
 
@@ -184,7 +184,7 @@ header nav {
   justify-content: center; /* Center horizontally */
   align-items: center; /* Center vertically */
   background-color: #f0f4f8; /* Light background for a modern look */
-  color: #212153;
+  color: #006749;
   padding: 26vh 20px; /* Adjust padding to avoid overflow on mobile */
   gap: 3%; /* 3% space between text and photo */
   flex-wrap: wrap; /* Allows the content to wrap on smaller screens */
@@ -208,7 +208,7 @@ header nav {
   line-height: 1.2;
   margin: 0;
   font-weight: bold; /* Make the text bold for emphasis */
-  color: #212153;
+  color: #006749;
   position: relative;
 }
 
@@ -318,7 +318,7 @@ header nav {
   padding: 0 20px;
   padding-top: 35px;
   color: white;
-  background-color: #212153; /* Dark blue background */
+  background-color: #006749; /* Dark blue background */
 }
 
 .content-container {
@@ -487,7 +487,7 @@ header nav {
 
 
 .people-section {
-  background-color: #212153;
+  background-color: #006749;
   padding-top: 8%;
 }
 
@@ -552,7 +552,7 @@ header nav {
 
 /* Back face */
 .profile-card-back {
-  background-color: #0070c0;
+  background-color: white;
   color: white;
   display: flex;
   flex-direction: column;
@@ -572,13 +572,13 @@ header nav {
 
 .profile-title {
   font-size: 1.2em;
-  color: #0070c0;
+  color: #006749;
   margin-bottom: 10px;
 }
 
 .profile-description {
   font-size: 0.9em;
-  color: #ffffff;
+  color: #006749;
   text-align: center;
 }
 
@@ -624,17 +624,17 @@ header nav {
   background-color: white;
 }
 #research-track {
-  color: #212153;
+  color: #006749;
   background-color: white;
 }
 
 .research-track {
-  background-color: #2b2d4f; /* Dark background for the track */
+  background-color: #006749; /* Dark background for the track */
   color: white;
   border-radius: 10px;
   padding: 20px;
   flex: 1 1 30%; /* Flex-grow, flex-shrink, flex-basis */
-  max-width: 30%;
+  max-width: 35%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   position: relative;
@@ -697,12 +697,14 @@ header nav {
 
 
 
+
+
 #projects {
   background-color: white;
 }
 
 .projects-container {
-  background-color: #212153; /* Dark background for the section */
+  background-color: #006749; /* Dark background for the section */
   color: white;
   padding: 30px;
   border-radius: 10px;
@@ -797,7 +799,7 @@ header nav {
 
 .contact-container {
   padding: 30px;
-  background-color: #2b2d4f; /* Dark background for the section */
+  background-color: #006749; /* Dark background for the section */
   color: white;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
