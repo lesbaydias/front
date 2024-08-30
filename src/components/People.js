@@ -1,29 +1,25 @@
-import React, { useState } from "react";
-import { FaPlus } from "react-icons/fa"; // Using FaPlus for the toggle button
+import React from "react";
 
-const ProfileCard = ({ name, title, brief, fullText }) => {
-  const [expanded, setExpanded] = useState(false);
-
-  const toggleDescription = () => {
-    setExpanded(!expanded);
-  };
-
+const ProfileCard = ({ name, title, fullText }) => {
   return (
     <div className="profile-card">
-      <img
-        src="https://via.placeholder.com/150"
-        alt={name}
-        className="profile-image"
-      />
-      <h4>{name}</h4>
-      <p className="profile-title">{title}</p>
-      <div className={`profile-description ${expanded ? "expanded" : ""}`}>
-        <p>{fullText}</p>
+      <div className="profile-card-inner">
+        {/* Front Face */}
+        <div className="profile-card-front">
+          <img
+            src="https://via.placeholder.com/150"
+            alt={name}
+            className="profile-image"
+          />
+          <h4 className="profile-title">{name}</h4>
+          <p className="profile-title">{title}</p>
+        </div>
+
+        {/* Back Face */}
+        <div className="profile-card-back">
+          <div className="profile-description">{fullText}</div>
+        </div>
       </div>
-      <button className="toggle-btn" onClick={toggleDescription}>
-        {expanded ? "Show Less" : "Read More"}
-        <FaPlus className={`toggle-icon ${expanded ? "rotated" : ""}`} />
-      </button>
     </div>
   );
 };
@@ -33,32 +29,30 @@ const People = () => {
     <section className="people-section" id="people">
       <h2 className="section-title">Our People</h2>
       <div className="team">
-        <div className="team-title">Leadership</div>
-        <ProfileCard
-          name="Bauyrzhan Yedgenov"
-          title="PhD Associate Director"
-          brief="Brief information about Bauyrzhan Yedgenov..."
-          fullText="Bauyrzhan Yedgenov is an Assistant Professor at SDU University. He is also an affiliated senior research associate at the International Center for Public Policy at Georgia State University (USA) since 2017. His primary research interests are Public Economics and Development Economics..."
-        />
-        <ProfileCard
-          name="Bekzhan Tolybay"
-          title="MA Deputy Director"
-          brief="Brief information about Bekzhan Tolybay..."
-          fullText="Bekzhan Tolybay is a master's program student at SDU University. The topic of his dissertation is 'Fiscal Decentralization: Review of Intergovernmental Relations in Kazakhstan.' Currently, Bezhan works as the Director of the Corporate Development Department at SDU University..."
-        />
-        <div className="team-title">Research Associates</div>
+        <div className="prof"><ProfileCard
+          name="Bauyrzhan Yedgenov, PhD Associate Director"
+          title="Associate Director (Governance, Education)"
+          fullText="Bauyrzhan Yedgenov is an Assistant Professor at SDU University. He is also an affiliated senior research associate at the International Center for Public Policy in the Andrew Young School of Policy Studies at Georgia State University (USA) since 2017. His primary research interests are Public Economics and Development Economics, specifically state and local public finance, fiscal federalism, taxation, the progressivity of personal income taxes, and their relation to economic development and growth."
+        /></div>
+        <div className="prof"><ProfileCard
+          name="Bekzhan Tolybay, MA Economics"
+          title="Deputy Director (Governance)"
+          fullText="Master's program student at SDU University. His dissertation is on 'Fiscal Decentralization: Review of Intergovernmental Relations in Kazakhstan.' He is the Director of Corporate Development at SDU University."
+        /></div>
+        <div className="prof">
         <ProfileCard
           name="Abylay Tursyn"
           title="PhD Candidate"
-          brief="Brief information about Abylay Tursyn..."
-          fullText="Mr. Tursyn is currently a PhD student at Narxoz University and his topic of dissertation is the determinants of success of government tenders and public procurement. He is also CEO and lead developer of TADS Studio, which develops ERP systems for companies..."
+          fullText="Mr. Tursyn is a PhD student at Narxoz University, researching government tenders and public procurement success factors. He is also CEO and lead developer at TADS Studio."
         />
+        </div>
+        <div className="prof">
         <ProfileCard
           name="Nurzhan Mukashev"
           title="PhD"
-          brief="Brief information about Nurzhan Mukashev..."
-          fullText="Nurzhan Mukashev is a PhD Research Associate specializing in Public Health. His research focuses on the impact of public health policies and their implementation..."
+          fullText="Nurzhan Mukashev is a PhD Research Associate specializing in Public Health, with research on the impact of public health policies and their implementation."
         />
+        </div>
       </div>
     </section>
   );

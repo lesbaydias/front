@@ -9,9 +9,9 @@ const Projects = () => {
       <div className="projects-container">
         <h2 className="projects-title">Projects</h2>
         <div className="project-detail">
-          <h3>
+          <p className="abs">
             <FontAwesomeIcon icon={faAward} className="icon" /> “Decentralization, Local Governance and Regional Development in Kazakhstan” (2024-2026)
-          </h3>
+          </p>
           <p><strong className="abs"><FontAwesomeIcon icon={faUser} className="icon" /> Principal Investigator:</strong> Bauyrzhan Yedgenov</p>
           <p><strong className="abs"><FontAwesomeIcon icon={faDollarSign} className="icon" /> Amount:</strong> 83 180 290 KZT (~ 174,187 USD)</p>
           <p><strong className="abs"><FontAwesomeIcon icon={faUsers} className="icon" /> Research Team:</strong> Dr. Alisher Aldashev (Kazakh-British Technical University, Kazakhstan), Olzhas Zhorayev (George Mason University, USA), Bekzhan Tolybay (Cambodia), Abylay Tursyn (Narxoz, Kazakhstan), Azamat Sadykov (Sagadiev University of International Business)</p>

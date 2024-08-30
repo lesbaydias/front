@@ -52,10 +52,10 @@ header nav {
 }
 
 .logo {
-  width: 45px;
+  width: 70px;
   height: auto;
   margin-right: 10px;
-  border-radius: 50%;
+  border-radius: 5px;
   transition: transform 0.5s ease;
 }
 
@@ -106,14 +106,12 @@ header nav {
   }
 
   .logo-container {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center; 
-    margin-bottom: 10px; 
   }
 
   .logo {
-    width: 9%;
-    margin-bottom: 10px; 
+    width: 15%;
   }
 
   .site-title {
@@ -129,15 +127,15 @@ header nav {
     display: none; /* Hide by default */
     width: 100%; /* Ensure full width for mobile */
     position: absolute; /* Position absolutely */
-    top: 70px; /* Adjust position below the header */
+    top: 40px; /* Adjust position below the header */
     left: 0; /* Align with the left edge */
     background-color: #212153; /* Background color for the dropdown */
-    z-index: 999; /* Ensure it appears above other content */
+    z-index: 0; /* Ensure it appears above other content */
   }
 
   .nav-links-mobile {
     display: flex; /* Show when menu is open */
-    margin-top: 34px;
+    margin-top: 30px;
   }
 
   .nav-links a {
@@ -162,19 +160,33 @@ header nav {
   .menu-toggle {
     display: none; /* Hide the menu toggle button on larger screens */
   }
+}
+@media (max-width: 550) {
+  .logo{
+    width: 17%;
+  }
 
 }
+
+
+
+
+
+
+
+
+
 
 
 /* Hero Section */
 .hero {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
   background-color: #f0f4f8; /* Light background for a modern look */
   color: #212153;
-  padding: 24vh 20px; /* Adjust padding to avoid overflow on mobile */
-  gap: 20px;
+  padding: 26vh 20px; /* Adjust padding to avoid overflow on mobile */
+  gap: 3%; /* 3% space between text and photo */
   flex-wrap: wrap; /* Allows the content to wrap on smaller screens */
   position: relative;
   overflow: hidden; /* Prevents overflow of animated elements */
@@ -183,10 +195,11 @@ header nav {
 /* Text Container */
 .text-container {
   flex: 1;
-  max-width: 50%;
-  padding: 10px; /* Add some padding for better spacing */
+  max-width: 45%; /* Reduce width slightly to allow space for 3% gap */
+  padding: 10px;
   position: relative;
   z-index: 1;
+  text-align: center; /* Center align the text */
 }
 
 /* Main Heading */
@@ -194,8 +207,6 @@ header nav {
   font-size: 3rem;
   line-height: 1.2;
   margin: 0;
-  margin-left: 10%;
-  margin-right: 5%;
   font-weight: bold; /* Make the text bold for emphasis */
   color: #212153;
   position: relative;
@@ -206,7 +217,7 @@ header nav {
   font-size: 1.2rem;
   color: #666;
   margin-top: 10px;
-  margin-left: 10%;
+  text-align: center;
 }
 
 /* Scroll Down Indicator */
@@ -226,16 +237,15 @@ header nav {
 /* Photo Container */
 .photo-container {
   flex: 1;
-  max-width: 50%;
-  text-align: right; /* Aligns the image to the right */
-  padding: 10px; /* Add some padding for better spacing */
-  margin-right: 6%;
+  max-width: 45%; /* Reduce width slightly to allow space for 3% gap */
+  text-align: center; /* Center-align the image */
+  padding: 10px;
   position: relative;
 }
 
 /* Image Styles */
 .photo-container img {
-  max-width: 90%;
+  max-width: 100%; /* Ensure the image occupies available space */
   height: auto;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: add shadow for a subtle 3D effect */
@@ -249,6 +259,10 @@ header nav {
 
 /* Mobile Adaptations */
 @media (max-width: 768px) {
+  header {
+    position: relative;
+  }
+
   .hero {
     flex-direction: column;
     text-align: center;
@@ -290,6 +304,11 @@ header nav {
     transform: translateY(-10px);
   }
 }
+
+
+
+
+
 
 
 
@@ -369,7 +388,6 @@ header nav {
   height: auto;
   border-radius: 15px;
   transition: transform 0.5s ease, box-shadow 0.5s ease, filter 0.5s ease;
-  /* Adding transition properties for smooth effects */
 }
 
 .animated-image:hover {
@@ -384,6 +402,7 @@ header nav {
   justify-content: space-between;
   margin-top: 50px;
   gap: 20px;
+  color: #e58c09;
   flex-wrap: wrap;
 }
 
@@ -396,9 +415,11 @@ header nav {
 .icons-container {
   display: flex;
   justify-content: space-around;
+  align-items: center;
   margin-top: 50px;
   gap: 20px;
   flex-wrap: wrap;
+  padding-bottom: 5%;
 }
 
 .icon-box {
@@ -466,67 +487,82 @@ header nav {
 
 
 .people-section {
-  background-color: #212153; /* Light background */
+  background-color: #212153;
   padding-top: 8%;
 }
 
 .section-title {
   font-size: 2.5em;
-  color: #FFA500; /* Blue */
+  color: #FFA500;
   text-align: center;
   margin-bottom: 20px;
-  position: relative;
-}
-
-.section-title::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -10px;
-  height: 4px;
-  width: 100%;
-  background: white; /* Blue underline */
-  transform: translateX(-100%);
-  transition: transform 0.5s ease-in-out;
-}
-
-.section-title:hover::after {
-  transform: translateX(0);
 }
 
 .team {
   display: flex;
   justify-content: center;
-  gap: 20px;
   flex-wrap: wrap;
   padding-bottom: 3%;
 }
 
-.team-title {
-  font-size: 1.8em;
-  color: white; /* Blue */
-  margin-bottom: 20px;
-  width: 100%;
-  text-align: center;
-}
-
 .profile-card {
-  width: 20%;
+  width: 250px;
+  height: 350px;
+  perspective: 1000px; /* Enables 3D space */
+  margin: 10px;
+}
+
+.prof {
+  margin: 2%;
+}
+
+.profile-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
   text-align: center;
-  background-color: #ffffff; /* White background for cards */
-  border-radius: 10px;
-  color: #333; /* Dark text */
-  padding: 20px;
-  margin: 0 10px;
+  transition: transform 0.6s ease-in-out; /* Smooth transition */
+  transform-style: preserve-3d;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.profile-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+.profile-card:hover .profile-card-inner  {
+  transform: rotateY(180deg); /* Rotate on hover */
 }
 
+/* Front and back faces of the card */
+.profile-card-front,
+.profile-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* Hides the back face when not visible */
+  border-radius: 10px;
+}
+
+/* Front face */
+.profile-card-front {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Back face */
+.profile-card-back {
+  background-color: #0070c0;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  transform: rotateY(180deg); /* Initially flipped */
+}
+
+/* Profile image and text styling */
 .profile-image {
   width: 150px;
   height: 150px;
@@ -536,50 +572,34 @@ header nav {
 
 .profile-title {
   font-size: 1.2em;
-  color: #0070c0; /* Blue */
+  color: #0070c0;
   margin-bottom: 10px;
 }
 
 .profile-description {
-  overflow: hidden;
-  max-height: 0;
-  transition: max-height 0.5s ease-out;
-}
-
-.profile-description.expanded {
-  max-height: 200px;
-}
-
-.toggle-btn {
-  background-color: #0070c0; /* Blue */
-  color: white;
-  border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
-  cursor: pointer;
   font-size: 0.9em;
-  transition: background-color 0.3s ease;
+  color: #ffffff;
+  text-align: center;
 }
 
-.toggle-btn:hover {
-  background-color: #005b99; /* Darker blue */
-}
-
-.toggle-icon {
-  margin-left: 10px;
-  transition: transform 0.3s ease;
-}
-
-.toggle-icon.rotated {
-  transform: rotate(45deg);
-}
-
-/* Responsive Design */
+/* Mobile Adaptation */
 @media (max-width: 768px) {
-  .profile-card {
-    width: 100%;
+  .team {
+    flex-direction: column;
+    align-items: center; /* Center the cards horizontally */
+  }
+
+  .prof {
+    margin: 3%;
   }
 }
+
+
+
+
+
+
+
 
 
 
@@ -718,41 +738,16 @@ header nav {
   position: relative;
 }
 
-.project-detail h3 {
-  font-size: 1.3em; /* Decreased font size slightly */
-  font-weight: 500;
-  color: #FFA500; /* Orange */
-  margin-bottom: 10px;
-  position: relative;
-  padding-left: 30px;
-  transition: color 0.3s ease;
-}
-
-.project-detail h3:hover {
-  color: #FF5733; /* Change on hover */
-}
-
-.project-detail h3::before {
-  content: "";
-  display: block;
-  width: 20px;
-  height: 20px;
-  background: #FFA500;
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  border-radius: 50%;
-}
 
 .project-detail p {
-  font-size: 1.05em; /* Decreased font size slightly */
+  font-size: 1.35em; /* Decreased font size slightly */
   line-height: 1.6em;
   color: white;
   position: relative;
   padding-left: 30px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Line between paragraphs */
   padding-bottom: 10px;
+
 }
 
 .project-detail p .icon {
@@ -786,6 +781,7 @@ header nav {
   color: #FFA500; /* Orange */
   font-weight: bold;
 }
+
 
 
 
