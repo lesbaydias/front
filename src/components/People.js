@@ -7,95 +7,87 @@ import nurzhanImage from './nurzhan.png';
 import olzhasImage from './olzhas.png';
 import urbanImage from './urban.png';
 
-
-
-
-const ProfileCard = ({ name, title, fullText, imageUrl}) => {
+const ProfileBlock = ({ name, title, fullText, imageUrl }) => {
   return (
-    <div className="profile-card">
-      <div className="profile-card-inner">
-        {/* Front Face */}
-        <div className="profile-card-front">
-          <img
-            src={imageUrl} // Use the imageUrl prop for different images
-            alt={name}
-            className="profile-image"
-          />
-          <h4 className="profile-title">{name}</h4>
-          <p className="profile-title">{title}</p>
-        </div>
-
-        {/* Back Face */}
-        <div className="profile-card-back">
-          <div className="profile-description">{fullText}</div>
-        </div>
+    <div className="profile-block">
+      <img
+        src={imageUrl}
+        alt={name}
+        className="profile-image"
+      />
+      <div className="profile-details">
+        <div className="inRow"><h4 className="profile-name">{name}</h4></div>
+        <div className="inRow"><p className="profile-title">{title}</p></div>
+        <div className="inRow"><p className="profile-description">{fullText}</p></div>
       </div>
     </div>
   );
 };
 
+
 const People = () => {
   return (
     <section className="people-section" id="people">
-      <h2 className="section-title">Our People</h2>
       <div className="team">
-        <div className="prof"><ProfileCard
+      <div className="title-wrapper">
+          <div className="title-bar2"></div>
+          <h2 className="section-title2">Our People</h2>
+        </div>
+       <div>
+        <ProfileBlock
           name="Bauyrzhan Yedgenov, PhD Associate Director"
           title="Associate Director (Governance, Education)"
-          fullText="Bauyrzhan Yedgenov is an Assistant Professor at SDU University. He is also an affiliated senior research associate at the International Center for Public Policy in the Andrew Young School of Policy Studies at Georgia State University (USA) since 2017. His primary research interests are Public Economics and Development Economics, specifically state and local public finance, fiscal federalism, taxation, the progressivity of personal income taxes, and their relation to economic development and growth."
+          fullText="Bauyrzhan Yedgenov is an Assistant Professor at SDU University and a Senior Research Associate at the International Center for Public Policy at Georgia State University. His research focuses on Public and Development Economics, particularly in areas like fiscal federalism, taxation, and economic growth. He has published in top journals such as World Development, Journal of Economics Geography, and the European Journal of Political Economy, with a focus on fiscal decentralization's impact on economic growth, often using geography indicators for causality analysis"
           imageUrl={bauyrzhanImage}
-        /></div>
-        <div className="prof"><ProfileCard
+        />
+        </div>
+        <div>
+        <ProfileBlock
           name="Bekzhan Tolybay, MA Economics"
           title="Deputy Director (Governance)"
-          fullText="Master's program student at SDU University. His dissertation is on 'Fiscal Decentralization: Review of Intergovernmental Relations in Kazakhstan.' He is the Director of Corporate Development at SDU University."
+          fullText="Master's program student at SDU University. His dissertation is on 'Fiscal Decentralization: Review of Intergovernmental Relations in Kazakhstan.He is the Director of the Corporate Development Department at SDU, overseeing external relations and commercial projects. As the curator of SDU Technopark, he collaborates on IT projects with private companies. Bezhan has 10 years of experience in the public sector, working with central and regional authorities, including the South Kazakhstan and Aktobe region akimats. His interests are in public administration, regional development, and international relations."
           imageUrl={bekzhanImage}
         /></div>
-        <div className="prof">
-        <ProfileCard
+        <div>
+        <ProfileBlock
           name="Ugur Choban, PhD Management"
           title="Research Associate (Economic Development)"
-          fullText="Dr. Choban is a seasoned academic with 18 years in academia and 29 years in education. Holding a PhD from the University of Kebangsaan Malaysia, he's currently a faculty member at SDU University, Kazakhstan, and serves as the Research Coordinator for the Business School. His research interests lie in Entrepreneurship and Social Capital, with notable works like “Social Networks and Entrepreneurships – Does Personal Networks Matter?”. He earned his bachelor's degree at Istanbul University and a master's from SDU University. Dr. Choban's teaching expertise includes Financial Management, Principles of Accounting, Cost Accounting, and Corporate Finance, demonstrating his extensive knowledge and versatility in the field."
+          fullText="Dr. Choban, a distinguished academic with 18 years in academia and 29 years in education, holds a PhD from the University of Kebangsaan Malaysia. He is a faculty member and Research Coordinator at SDU University, Kazakhstan, specializing in Entrepreneurship and Social Capital. His notable research includes “Social Networks and Entrepreneurships – Does Personal Networks Matter?”. Dr. Choban earned his bachelor's degree from Istanbul University and a master's from SDU University, and teaches Financial Management, Accounting, and Corporate Finance."
           imageUrl={urbanImage}
-      
-       />
+        />
         </div>
-        <div className="prof">
-        <ProfileCard
+        <div>
+        <ProfileBlock
           name="Nurzhan Mukashev, MD, PhD Health Policy and Management"
           title="Research Associate (Healthcare)"
-          fullText="Dr.  Mukashev has an MD degree (Semey Medical University), PhD in Health Policy and Management (Tulane University, USA), Master of Health Services Administration (University of Michigan - Ann Arbor, USA). Dr. Mukashev holds the position of Assistant Professor at SDU University Business School (Kazakhstan), where he also directs the Center for Health, Policy and Management. His research interests relate to the linkage between population health & health services and climate, equity, and information technology. He employs various research methods in his projects with quantitative data analyses. Nurzhan has published in top healthcare journals like Health Affairs (Q1, 93%)."
+          fullText="Dr. Mukashev, an Assistant Professor at SDU University Business School, holds an MD from Semey Medical University, a PhD in Health Policy and Management from Tulane University, and a Master of Health Services Administration from the University of Michigan. He directs the Center for Health, Policy and Management, focusing on the links between health services, climate, equity, and IT. His research, published in top journals like Health Affairs, involves quantitative data analyses. With extensive experience in healthcare in Kazakhstan and the USA, and involvement in national projects funded by the Asian Development Bank and WHO, he aims to address public health issues at both regional and local levels."
           imageUrl={nurzhanImage}
-       
-       /></div>
-        <div className="prof">
-          <ProfileCard
+        />
+        </div>
+        <div>
+        <ProfileBlock
           name="Abylay Tursyn, PhD Candidate Economics"
           title="Research Associate (Governance)"
-          fullText="Mr. Tursyn is currently a PhD student at Narxoz University and his topic of dissertation is the determinants of success of government tenders and public procurement. He also as CEO and lead developer of TADS Studio - development of ERP systems for companies. Interested in economics, IT, research in general, public procurements. Participated in research projects as a developer in medical research project and development of web books for Kazakh language to assist in transition to Latin alphabet. Published article in international conference about e-banking."
+          fullText="Mr. Tursyn is a PhD student at Narxoz University, focusing on the determinants of success in government tenders and public procurement. He is the CEO and lead developer at TADS Studio, specializing in ERP systems. His interests include economics, IT, and research, and he has contributed to medical research projects and developed web resources for the Kazakh language transition to the Latin alphabet. He has also published an article on e-banking at an international conference."
           imageUrl={abylayImage}
-        
-        /></div>
-
-<div className="prof">
-          <ProfileCard
+        />
+        </div>
+        <div>
+        <ProfileBlock
           name="Alisher Tleubayev, PhD Agriculture Economics"
           title="Research Affiliate (Economic development)"
-          fullText="Alisher Tleubayev is a Postdoctoral Scholar at the Graduate School of Public Policy. He obtained his Ph.D. degree in agricultural economics from the Martin Luther University Halle-Wittenberg, Germany. Dr. Tleubayev’s broader research interests include gender and agricultural economics, including farm efficiency, digitalization in agriculture, corporate governance in agri-food enterprises and gender inequality. He has worked as a Research Fellow at the Leibniz Institute of Agricultural Development in Transition Economies (IAMO), Germany and as a Visiting Researcher at the American University, USA."
+          fullText="Dr. Alisher Tleubayev is a Postdoctoral Scholar at the Graduate School of Public Policy, holding a Ph.D. in Agricultural Economics from Martin Luther University Halle-Wittenberg, Germany. His research focuses on gender and agricultural economics, farm efficiency, digitalization in agriculture, corporate governance, and gender inequality. He has previously been a Research Fellow at the Leibniz Institute of Agricultural Development and a Visiting Researcher at American University."
           imageUrl={alisherImage}
-       
-       /></div>
-
-<div className="prof">
-          <ProfileCard
+        />
+        </div>
+        <div>
+        <ProfileBlock
           name="Olzhas Zhorayev, PhD Candidate Public Policy"
-          title="Research affiliate (Governance)"
-          fullText="Olzhas Zhorayev is Research Fellow at the Central Asian Institute for Development Studies, and at the Schar School of Policy and Government, George Mason University. Previously he worked as Deputy Director of the Center for Strategic Research and Analysis at the Executive Office of the President of Kazakhstan, Director of Research at the Center for Strategic Initiatives, and Deputy Director of the Department of Strategy and Analytics at KazMunayGas National Company. While working in the public sector, he was responsible for strategic and budget planning policy design and analysis, evaluating the state budget performance of central agencies"
+          title="Research Affiliate (Governance)"
+          fullText="Olzhas Zhorayev is a Research Fellow at the Central Asian Institute for Development Studies and the Schar School of Policy and Government, George Mason University. He has previously served as Deputy Director at the Center for Strategic Research and Analysis, Director of Research at the Center for Strategic Initiatives, and Deputy Director at KazMunayGas. His work focused on strategic and budget planning, evaluating state budget performance, and administrative and fiscal reforms. He has contributed to policy reports and memos on economic and fiscal issues for top government officials."
           imageUrl={olzhasImage}
-       
-       /></div>
-
-
+        />
+        </div>
       </div>
     </section>
   );
